@@ -1,0 +1,123 @@
+## Run Folder Settings
+ constant-run-folder: yes #If no it will use a dialog box
+ run-folder-path: 'C:\Users\Joseph\Documents\Data Analysis\EEG Data\Comprehensive\EEGanalyzer\EEGanalyzer\Run'
+
+ use-default-file-extension: yes #Default is .tsv for imports
+ #analysis-file-extension: '.tsv'
+
+ custom-output-folder: no #Defaults to creating an Output folder in same directory as setup.py
+ #output-folder-path: 'C:\Users\Joseph\Documents\Data Analysis\EEG Data\Manual Data\Generated'
+
+ custom-csv-folder: no
+ #new-csv-path: Your Full Path to Current Directory/ Your Folder Name
+
+## Filter Settings
+ notch-filter: yes
+ notch-target: 60 #Hz
+ notch-quality-factor: 3.75 # QF = (notch target / stopband amplitude)
+
+ bandpass-filter: no
+ bandpass-high: 500 #Hz
+ bandpass-low: 0.16 #Hz 
+ bandpass-quality-factor: 5 #See above but in reverse
+
+## Data Details
+ sample-freq: 2000 #Hz
+
+ channel-names:
+  1: EEG1
+  2: EEG2
+  3: EMG
+
+ trials-per-condition: 1500
+
+ trial-duration: 200 #Milliseconds
+
+ conditions:
+  1: 1Hz 10ms
+  2: 1Hz 05ms
+  3: 1Hz 20ms
+  4: 2Hz 10ms
+  5: 2Hz 05ms
+  6: 2Hz 20ms
+  7: 3Hz 10ms
+  8: 3Hz 05ms
+  9: 3Hz 20ms
+  10: 0.5Hz 10ms
+  11: 0.5Hz 05ms
+  12: 0.5Hz 20ms
+  13: 1Hz 10ms
+  14: 1Hz 05ms
+  15: 1Hz 20ms
+
+## Image Settings
+
+ generate-images: yes #necessary for the below functions, can save time
+ save-images: no #save some space and time
+ show-images: yes #warning generates a lot of files
+
+ x-label: Samples
+ y-label: mV
+
+ grid: yes
+ not-fucked-up-grid: please #not instantiated
+
+ waveform-padding: 20 #% Amount of the waveforms amplitude to use as padding
+ override-autoy: yes
+ y-min: -250 #mv ##Only if override-autoy set to yes
+ y-max: 250 #mv see above
+
+ figure-width: 16 #inches?
+ figure-height: 8 #inches?
+ image-type: png
+
+ fft-range: 250 #Hz, for example the value 100 means FFT will be from [0 - 100 Hz]
+ fft-title: Spectrographic Analysis
+ fft-override-autoy: no
+ fft-magnitude-max: 100 #Only active if fft-override-autoy is yes 
+ fft-x-label: Spectrum
+ fft-y-label: Magnitude
+
+## Name Parsing ** Leave this intact, seriously.
+ output-elements:
+  - Friendly Name
+  - Experiment Name
+  - Experiment Date
+  - Animal Number
+  - Type
+  - Experiment Time
+  - Surgery Date
+ filename-elements:
+  - Experiment Name
+  - Surgery Year
+  - Surgery Month
+  - Surgery Day
+  - Animal Number
+  - Experiment Year
+  - Experiment Month
+  - Experiment Day
+  - Experiment Hour
+  - Experiment Minute
+  - Experiment Second
+  - Type
+  - Extension
+
+#Examples Below
+ doe: "a deer, a female deer"
+ ray: "a drop of golden sun"
+ pi: 3.14159
+ xmas: true
+ french-hens: 3
+ calling-birds:
+   - huey
+   - dewey
+   - louie
+   - fred
+ xmas-fifth-day:
+   calling-birds: four
+   french-hens: 3
+   golden-rings: 5
+   partridges:
+     count: 1
+     location: "a pear tree"
+   turtle-doves: two

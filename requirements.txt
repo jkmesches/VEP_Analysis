@@ -1,0 +1,6 @@
+matplotlib
+pandas
+PyYAML
+pathlib
+numpy
+SciPy
