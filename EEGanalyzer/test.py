@@ -238,7 +238,7 @@ class ProcessImages():
         pass
 
 def main():
-    filepath='C:/Users/Joseph/Documents/Data Analysis/EEG Data/Comprehensive/EEGanalyzer/EEGanalyzer/Data Files/2021-12-13/Whack.edf'
+    filepath='' #Your Filepath
     test_edf = EDF(filepath)
     pass
 
